@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5A52F2561A40CF51004553F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F2551A40CF51004553F8 /* AppDelegate.swift */; };
-		5A52F2581A40CF51004553F8 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F2571A40CF51004553F8 /* MasterViewController.swift */; };
-		5A52F25A1A40CF51004553F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F2591A40CF51004553F8 /* DetailViewController.swift */; };
 		5A52F25D1A40CF51004553F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F25B1A40CF51004553F8 /* Main.storyboard */; };
 		5A52F25F1A40CF51004553F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F25E1A40CF51004553F8 /* Images.xcassets */; };
 		5A52F2621A40CF51004553F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F2601A40CF51004553F8 /* LaunchScreen.xib */; };
 		5A52F26E1A40CF51004553F8 /* JambotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F26D1A40CF51004553F8 /* JambotTests.swift */; };
+		5A76336F1A4617CB002605EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A76336E1A4617CB002605EF /* Alamofire.framework */; };
+		5A7633711A461CB7002605EF /* JamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7633701A461CB7002605EF /* JamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +30,14 @@
 		5A52F2501A40CF51004553F8 /* Jambot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jambot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A52F2541A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F2551A40CF51004553F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A52F2571A40CF51004553F8 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		5A52F2591A40CF51004553F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5A52F25C1A40CF51004553F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A52F25E1A40CF51004553F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A52F2611A40CF51004553F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5A52F2671A40CF51004553F8 /* JambotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JambotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A52F26C1A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F26D1A40CF51004553F8 /* JambotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambotTests.swift; sourceTree = "<group>"; };
+		5A76336E1A4617CB002605EF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Vendor/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		5A7633701A461CB7002605EF /* JamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A76336F1A4617CB002605EF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +62,7 @@
 		5A52F2471A40CF50004553F8 = {
 			isa = PBXGroup;
 			children = (
+				5A76336E1A4617CB002605EF /* Alamofire.framework */,
 				5A52F2521A40CF51004553F8 /* Jambot */,
 				5A52F26A1A40CF51004553F8 /* JambotTests */,
 				5A52F2511A40CF51004553F8 /* Products */,
@@ -80,8 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5A52F2551A40CF51004553F8 /* AppDelegate.swift */,
-				5A52F2571A40CF51004553F8 /* MasterViewController.swift */,
-				5A52F2591A40CF51004553F8 /* DetailViewController.swift */,
+				5A7633701A461CB7002605EF /* JamViewController.swift */,
 				5A52F25B1A40CF51004553F8 /* Main.storyboard */,
 				5A52F25E1A40CF51004553F8 /* Images.xcassets */,
 				5A52F2601A40CF51004553F8 /* LaunchScreen.xib */,
@@ -215,9 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A52F25A1A40CF51004553F8 /* DetailViewController.swift in Sources */,
-				5A52F2581A40CF51004553F8 /* MasterViewController.swift in Sources */,
 				5A52F2561A40CF51004553F8 /* AppDelegate.swift in Sources */,
+				5A7633711A461CB7002605EF /* JamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +340,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Jambot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +354,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Jambot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +417,7 @@
 				5A52F2731A40CF51004553F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A52F2741A40CF51004553F8 /* Build configuration list for PBXNativeTarget "JambotTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				5A52F2761A40CF51004553F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
