@@ -27,13 +27,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A52F2501A40CF51004553F8 /* Jambot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jambot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A52F2501A40CF51004553F8 /* Jambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A52F2541A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F2551A40CF51004553F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A52F25C1A40CF51004553F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A52F25E1A40CF51004553F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A52F2611A40CF51004553F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5A52F2671A40CF51004553F8 /* JambotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JambotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A52F2671A40CF51004553F8 /* JamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A52F26C1A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F26D1A40CF51004553F8 /* JambotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambotTests.swift; sourceTree = "<group>"; };
 		5A76336E1A4617CB002605EF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Vendor/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				5A76336E1A4617CB002605EF /* Alamofire.framework */,
-				5A52F2521A40CF51004553F8 /* Jambot */,
-				5A52F26A1A40CF51004553F8 /* JambotTests */,
+				5A52F2521A40CF51004553F8 /* Jambo */,
+				5A52F26A1A40CF51004553F8 /* JamboTests */,
 				5A52F2511A40CF51004553F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,13 +72,13 @@
 		5A52F2511A40CF51004553F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A52F2501A40CF51004553F8 /* Jambot.app */,
-				5A52F2671A40CF51004553F8 /* JambotTests.xctest */,
+				5A52F2501A40CF51004553F8 /* Jambo.app */,
+				5A52F2671A40CF51004553F8 /* JamboTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A52F2521A40CF51004553F8 /* Jambot */ = {
+		5A52F2521A40CF51004553F8 /* Jambo */ = {
 			isa = PBXGroup;
 			children = (
 				5A52F2551A40CF51004553F8 /* AppDelegate.swift */,
@@ -88,7 +88,7 @@
 				5A52F2601A40CF51004553F8 /* LaunchScreen.xib */,
 				5A52F2531A40CF51004553F8 /* Supporting Files */,
 			);
-			path = Jambot;
+			path = Jambo;
 			sourceTree = "<group>";
 		};
 		5A52F2531A40CF51004553F8 /* Supporting Files */ = {
@@ -99,12 +99,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5A52F26A1A40CF51004553F8 /* JambotTests */ = {
+		5A52F26A1A40CF51004553F8 /* JamboTests */ = {
 			isa = PBXGroup;
 			children = (
 				5A52F26D1A40CF51004553F8 /* JambotTests.swift */,
 				5A52F26B1A40CF51004553F8 /* Supporting Files */,
 			);
+			name = JamboTests;
 			path = JambotTests;
 			sourceTree = "<group>";
 		};
@@ -119,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A52F24F1A40CF50004553F8 /* Jambot */ = {
+		5A52F24F1A40CF50004553F8 /* Jambo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A52F2711A40CF51004553F8 /* Build configuration list for PBXNativeTarget "Jambot" */;
+			buildConfigurationList = 5A52F2711A40CF51004553F8 /* Build configuration list for PBXNativeTarget "Jambo" */;
 			buildPhases = (
 				5A52F24C1A40CF50004553F8 /* Sources */,
 				5A52F24D1A40CF50004553F8 /* Frameworks */,
@@ -131,14 +132,14 @@
 			);
 			dependencies = (
 			);
-			name = Jambot;
+			name = Jambo;
 			productName = Jambot;
-			productReference = 5A52F2501A40CF51004553F8 /* Jambot.app */;
+			productReference = 5A52F2501A40CF51004553F8 /* Jambo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A52F2661A40CF51004553F8 /* JambotTests */ = {
+		5A52F2661A40CF51004553F8 /* JamboTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A52F2741A40CF51004553F8 /* Build configuration list for PBXNativeTarget "JambotTests" */;
+			buildConfigurationList = 5A52F2741A40CF51004553F8 /* Build configuration list for PBXNativeTarget "JamboTests" */;
 			buildPhases = (
 				5A52F2631A40CF51004553F8 /* Sources */,
 				5A52F2641A40CF51004553F8 /* Frameworks */,
@@ -149,9 +150,9 @@
 			dependencies = (
 				5A52F2691A40CF51004553F8 /* PBXTargetDependency */,
 			);
-			name = JambotTests;
+			name = JamboTests;
 			productName = JambotTests;
-			productReference = 5A52F2671A40CF51004553F8 /* JambotTests.xctest */;
+			productReference = 5A52F2671A40CF51004553F8 /* JamboTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A52F24B1A40CF50004553F8 /* Build configuration list for PBXProject "Jambot" */;
+			buildConfigurationList = 5A52F24B1A40CF50004553F8 /* Build configuration list for PBXProject "Jambo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,8 +186,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A52F24F1A40CF50004553F8 /* Jambot */,
-				5A52F2661A40CF51004553F8 /* JambotTests */,
+				5A52F24F1A40CF50004553F8 /* Jambo */,
+				5A52F2661A40CF51004553F8 /* JamboTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +235,7 @@
 /* Begin PBXTargetDependency section */
 		5A52F2691A40CF51004553F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A52F24F1A40CF50004553F8 /* Jambot */;
+			target = 5A52F24F1A40CF50004553F8 /* Jambo */;
 			targetProxy = 5A52F2681A40CF51004553F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -340,13 +341,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = Jambot/Info.plist;
+				INFOPLIST_FILE = Jambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jambo;
 			};
 			name = Debug;
 		};
@@ -354,20 +356,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = Jambot/Info.plist;
+				INFOPLIST_FILE = Jambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jambo;
 			};
 			name = Release;
 		};
 		5A52F2751A40CF51004553F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,32 +379,32 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = JambotTests/Info.plist;
+				INFOPLIST_FILE = JamboTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jambot.app/Jambot";
+				PRODUCT_NAME = JamboTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jambo.app/Jambo";
 			};
 			name = Debug;
 		};
 		5A52F2761A40CF51004553F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = JambotTests/Info.plist;
+				INFOPLIST_FILE = JamboTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jambot.app/Jambot";
+				PRODUCT_NAME = JamboTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jambo.app/Jambo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A52F24B1A40CF50004553F8 /* Build configuration list for PBXProject "Jambot" */ = {
+		5A52F24B1A40CF50004553F8 /* Build configuration list for PBXProject "Jambo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A52F26F1A40CF51004553F8 /* Debug */,
@@ -410,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A52F2711A40CF51004553F8 /* Build configuration list for PBXNativeTarget "Jambot" */ = {
+		5A52F2711A40CF51004553F8 /* Build configuration list for PBXNativeTarget "Jambo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A52F2721A40CF51004553F8 /* Debug */,
@@ -419,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A52F2741A40CF51004553F8 /* Build configuration list for PBXNativeTarget "JambotTests" */ = {
+		5A52F2741A40CF51004553F8 /* Build configuration list for PBXNativeTarget "JamboTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A52F2751A40CF51004553F8 /* Debug */,

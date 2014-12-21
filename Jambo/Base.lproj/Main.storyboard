@@ -25,7 +25,7 @@
         <!--Jambo-->
         <scene sceneID="Ec7-oC-5FW">
             <objects>
-                <viewController id="dgX-90-cnc" customClass="JamViewController" customModule="Jambot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dgX-90-cnc" customClass="JamViewController" customModule="Jambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="igv-VC-ovT"/>
                         <viewControllerLayoutGuide type="bottom" id="K2f-Jl-ojQ"/>
@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-b7-VNV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-b7-VNV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="269"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wrQ-zY-K8n">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
@@ -43,21 +43,23 @@
                                             <constraint firstAttribute="height" constant="270" id="AgP-Vw-8yB"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFJ-Lg-L4h">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFJ-Lg-L4h">
                                         <rect key="frame" x="215" y="50" width="170" height="170"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rko-Fr-p5Y">
-                                                <rect key="frame" x="20" y="20" width="130" height="130"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="rko-Fr-p5Y" secondAttribute="height" multiplier="1:1" id="Fxh-er-NQY"/>
-                                                    <constraint firstAttribute="width" constant="130" id="hs9-Xn-6Kc"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rko-Fr-p5Y">
+                                                <rect key="frame" x="15" y="15" width="140" height="140"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="centerY" secondItem="rko-Fr-p5Y" secondAttribute="centerY" id="7yp-NW-wb1"/>
+                                            <constraint firstAttribute="bottom" secondItem="rko-Fr-p5Y" secondAttribute="bottom" constant="15" id="8KY-u2-0z4"/>
+                                            <constraint firstItem="rko-Fr-p5Y" firstAttribute="leading" secondItem="EFJ-Lg-L4h" secondAttribute="leading" constant="15" id="B0y-J3-uzq"/>
                                             <constraint firstAttribute="centerX" secondItem="rko-Fr-p5Y" secondAttribute="centerX" id="Zek-rx-YnF"/>
+                                            <constraint firstItem="rko-Fr-p5Y" firstAttribute="top" secondItem="EFJ-Lg-L4h" secondAttribute="top" constant="15" id="gvo-ir-516"/>
+                                            <constraint firstAttribute="width" secondItem="EFJ-Lg-L4h" secondAttribute="height" multiplier="1:1" id="h8V-oq-gyd"/>
+                                            <constraint firstAttribute="trailing" secondItem="rko-Fr-p5Y" secondAttribute="trailing" constant="15" id="jfL-ZU-xne"/>
+                                            <constraint firstAttribute="height" constant="170" id="kA0-xE-Lin"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -71,32 +73,46 @@
                                     <constraint firstAttribute="centerY" secondItem="EFJ-Lg-L4h" secondAttribute="centerY" id="pvV-Xa-GWy"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-KZ-5xQ">
+                                <rect key="frame" x="0.0" y="270" width="600" height="266"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="MxS-G9-05O"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MxS-G9-05O"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PHL-b7-VNV" firstAttribute="top" secondItem="qCs-fY-P1m" secondAttribute="topMargin" id="8H5-fv-Oqi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PHL-b7-VNV" secondAttribute="trailing" constant="-16" id="AhN-3m-cM8"/>
+                            <constraint firstItem="dyy-KZ-5xQ" firstAttribute="leading" secondItem="qCs-fY-P1m" secondAttribute="leadingMargin" constant="-16" id="CkE-Qp-oLa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dyy-KZ-5xQ" secondAttribute="trailing" constant="-16" id="PgL-hV-86I"/>
                             <constraint firstItem="PHL-b7-VNV" firstAttribute="leading" secondItem="qCs-fY-P1m" secondAttribute="leadingMargin" constant="-16" id="aYJ-1u-A0V"/>
+                            <constraint firstAttribute="bottom" secondItem="dyy-KZ-5xQ" secondAttribute="bottom" id="gIz-t4-PX1"/>
+                            <constraint firstItem="dyy-KZ-5xQ" firstAttribute="top" secondItem="qCs-fY-P1m" secondAttribute="top" constant="269" id="ghH-IN-IEw"/>
+                            <constraint firstItem="dyy-KZ-5xQ" firstAttribute="top" secondItem="PHL-b7-VNV" secondAttribute="bottom" id="uag-Wb-Fps"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ghH-IN-IEw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Jambo" id="jHo-xs-Vyd"/>
                     <connections>
                         <outlet property="jamBackgroundView" destination="wrQ-zY-K8n" id="5ej-Dj-JNy"/>
+                        <outlet property="jamInfoBackgroundView" destination="dyy-KZ-5xQ" id="G30-on-RiF"/>
                         <outlet property="jamvatarView" destination="rko-Fr-p5Y" id="vfE-N9-xxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qr6-qz-L34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-96" y="204"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="xjS-eJ-ghs">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="xrz-vJ-prt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bs1-5R-0kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="578" y="204"/>
         </scene>
     </scenes>
 </document>

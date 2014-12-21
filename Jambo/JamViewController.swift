@@ -14,6 +14,7 @@ class JamViewController: UIViewController {
     
   @IBOutlet weak var jamBackgroundView: UIImageView!
   @IBOutlet weak var jamvatarView: UIImageView!
+  @IBOutlet weak var jamInfoBackgroundView: UIImageView!
   
 
     override func viewDidLoad() {
@@ -35,7 +36,9 @@ class JamViewController: UIViewController {
   func loadJamBackground(jam: NSDictionary) {
     let backgroundUrl = NSURL(string: jam["background"] as NSString)
     var imageData = NSData(contentsOfURL: backgroundUrl!)
-    self.jamBackgroundView.image = UIImage(data: imageData!)
+    let backgroundImage = UIImage(data: imageData!)
+    self.jamBackgroundView.image = backgroundImage
+    self.jamInfoBackgroundView.image = backgroundImage
   }
   
   func loadJamvatar(jam: NSDictionary) {

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Jambot.xcodeproj">
+      location = "container:Jambo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Vendor/Alamofire/Alamofire.xcodeproj">
