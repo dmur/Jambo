@@ -1,3 +1,6 @@
 [submodule "Vendor/Alamofire"]
 	path = Vendor/Alamofire
 	url = git@github.com:alamofire/alamofire.git
+[submodule "Vendor/Youtube"]
+	path = Vendor/Youtube
+	url = https://github.com/youtube/youtube-ios-player-helper.git
