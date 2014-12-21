@@ -105,8 +105,7 @@
 				5A52F26D1A40CF51004553F8 /* JambotTests.swift */,
 				5A52F26B1A40CF51004553F8 /* Supporting Files */,
 			);
-			name = JamboTests;
-			path = JambotTests;
+			path = JamboTests;
 			sourceTree = "<group>";
 		};
 		5A52F26B1A40CF51004553F8 /* Supporting Files */ = {
