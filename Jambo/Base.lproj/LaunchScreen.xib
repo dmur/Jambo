@@ -12,23 +12,30 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="failaini.png" translatesAutoresizingMaskIntoConstraints="NO" id="WKh-8O-mVt">
-                    <rect key="frame" x="128" y="76" width="225" height="252"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="WKh-8O-mVt" secondAttribute="height" multiplier="240:269" id="m5u-aF-dYV"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JAMBO" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="336" width="441" height="50"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAMBO" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                    <rect key="frame" x="20" y="340" width="441" height="24"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JamboHead" translatesAutoresizingMaskIntoConstraints="NO" id="WKh-8O-mVt">
+                    <rect key="frame" x="107" y="51" width="267" height="281"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="281" id="XYO-2v-Xhd"/>
+                        <constraint firstAttribute="width" constant="267" id="fbo-LS-0fg"/>
+                        <constraint firstAttribute="width" secondItem="WKh-8O-mVt" secondAttribute="height" multiplier="240:269" id="m5u-aF-dYV"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="m5u-aF-dYV"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="WKh-8O-mVt" secondAttribute="centerY" multiplier="1.25" constant="1" id="0Zo-KP-CQt"/>
                 <constraint firstAttribute="centerX" secondItem="WKh-8O-mVt" secondAttribute="centerX" id="1Hq-dL-LuJ"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="3/4" constant="1" id="5cJ-9S-tgC"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
                 <constraint firstItem="WKh-8O-mVt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="76" id="SVh-AA-aCq"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
@@ -36,10 +43,15 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="SVh-AA-aCq"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="failaini.png" width="754" height="832"/>
+        <image name="JamboHead" width="267" height="281"/>
     </resources>
 </document>
