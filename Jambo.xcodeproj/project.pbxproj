@@ -12,6 +12,7 @@
 		5A52F25F1A40CF51004553F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F25E1A40CF51004553F8 /* Images.xcassets */; };
 		5A52F2621A40CF51004553F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F2601A40CF51004553F8 /* LaunchScreen.xib */; };
 		5A52F26E1A40CF51004553F8 /* JambotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F26D1A40CF51004553F8 /* JambotTests.swift */; };
+		5A6F1C351A4675FF0088980B /* failaini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F1C341A4675FF0088980B /* failaini.png */; };
 		5A76336F1A4617CB002605EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A76336E1A4617CB002605EF /* Alamofire.framework */; };
 		5A7633711A461CB7002605EF /* JamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7633701A461CB7002605EF /* JamViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		5A52F2671A40CF51004553F8 /* JamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A52F26C1A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F26D1A40CF51004553F8 /* JambotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambotTests.swift; sourceTree = "<group>"; };
+		5A6F1C341A4675FF0088980B /* failaini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failaini.png; sourceTree = "<group>"; };
 		5A76336E1A4617CB002605EF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Vendor/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		5A7633701A461CB7002605EF /* JamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 		5A52F2531A40CF51004553F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A6F1C341A4675FF0088980B /* failaini.png */,
 				5A52F2541A40CF51004553F8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6F1C351A4675FF0088980B /* failaini.png in Resources */,
 				5A52F25D1A40CF51004553F8 /* Main.storyboard in Resources */,
 				5A52F2621A40CF51004553F8 /* LaunchScreen.xib in Resources */,
 				5A52F25F1A40CF51004553F8 /* Images.xcassets in Resources */,
