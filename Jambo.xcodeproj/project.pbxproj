@@ -13,7 +13,8 @@
 		5A52F2621A40CF51004553F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A52F2601A40CF51004553F8 /* LaunchScreen.xib */; };
 		5A52F26E1A40CF51004553F8 /* JambotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52F26D1A40CF51004553F8 /* JambotTests.swift */; };
 		5A6F1C351A4675FF0088980B /* failaini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F1C341A4675FF0088980B /* failaini.png */; };
-		5A76336F1A4617CB002605EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A76336E1A4617CB002605EF /* Alamofire.framework */; };
+		5A6F1C371A479A230088980B /* JamboSupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F1C361A479A230088980B /* JamboSupViewController.swift */; };
+		5A6F1C451A47D8A60088980B /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5A6F1C3E1A47D86D0088980B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A7633711A461CB7002605EF /* JamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7633701A461CB7002605EF /* JamViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +26,41 @@
 			remoteGlobalIDString = 5A52F24F1A40CF50004553F8;
 			remoteInfo = Jambot;
 		};
+		5A6F1C3D1A47D86D0088980B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		5A6F1C3F1A47D86D0088980B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		5A6F1C411A47D8800088980B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A6F1C431A47D88F0088980B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A6F1C451A47D8A60088980B /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A52F2501A40CF51004553F8 /* Jambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,7 +73,8 @@
 		5A52F26C1A40CF51004553F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A52F26D1A40CF51004553F8 /* JambotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambotTests.swift; sourceTree = "<group>"; };
 		5A6F1C341A4675FF0088980B /* failaini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failaini.png; sourceTree = "<group>"; };
-		5A76336E1A4617CB002605EF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Vendor/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		5A6F1C361A479A230088980B /* JamboSupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamboSupViewController.swift; sourceTree = "<group>"; };
+		5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Vendor/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		5A7633701A461CB7002605EF /* JamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A76336F1A4617CB002605EF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,10 +99,10 @@
 		5A52F2471A40CF50004553F8 = {
 			isa = PBXGroup;
 			children = (
-				5A76336E1A4617CB002605EF /* Alamofire.framework */,
 				5A52F2521A40CF51004553F8 /* Jambo */,
 				5A52F26A1A40CF51004553F8 /* JamboTests */,
 				5A52F2511A40CF51004553F8 /* Products */,
+				5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +120,7 @@
 			children = (
 				5A52F2551A40CF51004553F8 /* AppDelegate.swift */,
 				5A7633701A461CB7002605EF /* JamViewController.swift */,
+				5A6F1C361A479A230088980B /* JamboSupViewController.swift */,
 				5A52F25B1A40CF51004553F8 /* Main.storyboard */,
 				5A52F25E1A40CF51004553F8 /* Images.xcassets */,
 				5A52F2601A40CF51004553F8 /* LaunchScreen.xib */,
@@ -119,6 +155,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5A6F1C391A47D86D0088980B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F1C3E1A47D86D0088980B /* Alamofire.framework */,
+				5A6F1C401A47D86D0088980B /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +174,12 @@
 				5A52F24C1A40CF50004553F8 /* Sources */,
 				5A52F24D1A40CF50004553F8 /* Frameworks */,
 				5A52F24E1A40CF50004553F8 /* Resources */,
+				5A6F1C431A47D88F0088980B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5A6F1C421A47D8800088980B /* PBXTargetDependency */,
 			);
 			name = Jambo;
 			productName = Jambot;
@@ -187,6 +234,12 @@
 			mainGroup = 5A52F2471A40CF50004553F8;
 			productRefGroup = 5A52F2511A40CF51004553F8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5A6F1C391A47D86D0088980B /* Products */;
+					ProjectRef = 5A6F1C381A47D86D0088980B /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5A52F24F1A40CF50004553F8 /* Jambo */,
@@ -194,6 +247,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5A6F1C3E1A47D86D0088980B /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 5A6F1C3D1A47D86D0088980B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5A6F1C401A47D86D0088980B /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 5A6F1C3F1A47D86D0088980B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5A52F24E1A40CF50004553F8 /* Resources */ = {
@@ -222,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A52F2561A40CF51004553F8 /* AppDelegate.swift in Sources */,
+				5A6F1C371A479A230088980B /* JamboSupViewController.swift in Sources */,
 				5A7633711A461CB7002605EF /* JamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +312,11 @@
 			isa = PBXTargetDependency;
 			target = 5A52F24F1A40CF50004553F8 /* Jambo */;
 			targetProxy = 5A52F2681A40CF51004553F8 /* PBXContainerItemProxy */;
+		};
+		5A6F1C421A47D8800088980B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 5A6F1C411A47D8800088980B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -298,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -351,6 +427,7 @@
 					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Jambo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Jambo;
 			};
@@ -366,6 +443,7 @@
 					"$(PROJECT_DIR)/Vendor/Alamofire/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Jambo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Jambo;
 			};
