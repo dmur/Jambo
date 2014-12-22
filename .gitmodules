@@ -4,3 +4,6 @@
 [submodule "Vendor/Youtube"]
 	path = Vendor/Youtube
 	url = https://github.com/youtube/youtube-ios-player-helper.git
+[submodule "Vendor/Spotify"]
+	path = Vendor/Spotify
+	url = git@github.com:spotify/ios-sdk.git
