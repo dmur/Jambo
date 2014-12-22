@@ -14,6 +14,7 @@ class JamViewController: UIViewController {
     
   @IBOutlet weak var jamBackgroundView: UIImageView!
   @IBOutlet weak var jamvatarView: UIImageView!
+  @IBOutlet weak var jamvatarBorderView: UIView!
   @IBOutlet weak var jamInfoBackgroundView: UIImageView!
   @IBOutlet weak var jamTitleLabel: UILabel!
   @IBOutlet weak var jamArtistLabel: UILabel!
@@ -21,18 +22,28 @@ class JamViewController: UIViewController {
   
   var username: String = ""
   
-    override func viewDidLoad() {
-      super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.title = "\(self.username)'s jam"
 
-      Alamofire.request(.GET, "http://api.thisismyjam.com/1/\(self.username).json", parameters: nil, encoding: .JSON).responseJSON {
-        (_, _, profileData, _) in
-        let profile = profileData as NSDictionary,
-            jam = profile["jam"] as NSDictionary
-        
-        self.loadJam(jam)
+    Alamofire.request(.GET, "http://api.thisismyjam.com/1/\(self.username).json", parameters: nil, encoding: .JSON).responseJSON {
+      (_, _, profileData, _) in
+      let profile = profileData as NSDictionary?
+      
+      if (profile == nil) { println("no profile found for \(self.username)"); }
+      else {
+        let jam = profile!["jam"] as NSDictionary?
+        let person = profile!["person"] as NSDictionary?
+        if (jam == nil) {
+          println(profile)
+          if (person != nil) { self.currentJamIsLabel.text = "no current jam for \(self.username)" }
+        } else {
+          self.loadJam(jam!)
+        }
       }
-        // Do any additional setup after loading the view.
     }
+  }
   
   func loadJam(jam: NSDictionary) {
     self.currentJamIsLabel.text = "\(self.username)'s current jam is:"
@@ -51,7 +62,6 @@ class JamViewController: UIViewController {
   
   func loadJamvatar(jam: NSDictionary) {
     let jamvatarViewWidth = CGRectGetWidth(self.jamvatarView.frame)
-    println(jamvatarViewWidth)
     var jamvatarKey = "jamvatarSmall"
     let screenScale = UIScreen.mainScreen().scale
     if (jamvatarViewWidth >  185/screenScale) {
@@ -64,8 +74,9 @@ class JamViewController: UIViewController {
     var imageData = NSData(contentsOfURL: jamvatarUrl!)
     var jamvatar = UIImage(data: imageData!)
     
-    println(jamvatar!.size)
     self.jamvatarView.image = jamvatar
+    
+    self.jamvatarBorderView.backgroundColor = UIColor(white: 0, alpha:0.2)
   }
   
   func loadJamInfo(jam: NSDictionary) {
@@ -81,21 +92,5 @@ class JamViewController: UIViewController {
     artistString.addAttribute(NSForegroundColorAttributeName, value: jamColor, range: NSMakeRange(3, artistString.length - 3))
     self.jamArtistLabel.attributedText = artistString
   }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

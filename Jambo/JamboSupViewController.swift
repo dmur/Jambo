@@ -13,7 +13,6 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var jamboHeadWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var jamUsernameField: UITextField!
-  @IBOutlet weak var jamUsernameButton: UIButton!
   
   
   override func viewDidLoad() {
@@ -35,18 +34,19 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
   func greetUser() {
     self.messageLabel.hidden = false
     
-    let delayTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW,
-      Int64(1.5 * Double(NSEC_PER_SEC)))
-    dispatch_after(delayTime, dispatch_get_main_queue()) {
-      self.messageLabel.text = "Whose jam can I show you?"
-      
-      UIView.animateWithDuration(0.3, delay: 0, options: nil, animations: { () -> Void in
-        self.jamUsernameField.alpha = 1
-        self.jamUsernameButton.alpha = 1
+    self.doAfter(1.5, {
+      self.promptForJamUsername()
+    });
+  }
+  
+  func promptForJamUsername() {
+    self.messageLabel.text = "What's your This is My Jam username?"
+    
+    UIView.animateWithDuration(0.3, delay: 0, options: nil, animations: { () -> Void in
+      self.jamUsernameField.alpha = 1
       }, completion: { (_) in
         self.jamUsernameField.becomeFirstResponder(); return
-      })
-    }
+    })
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -66,7 +66,15 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
+  
+  func doAfter(seconds: Double, task: () -> Void) {
+    let delayTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW,
+    Int64(seconds * Double(NSEC_PER_SEC)))
+    dispatch_after(delayTime, dispatch_get_main_queue()) {
+      task()
+    }
+  }
 
     /*
     // MARK: - Navigation
