@@ -19,13 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbE-g2-QH8">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbE-g2-QH8">
                                 <rect key="frame" x="16" y="208" width="568" height="74"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="54"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqE-uk-nme">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqE-uk-nme">
                                 <rect key="frame" x="234" y="285" width="132" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="(for This Is My Jam)">
@@ -82,12 +82,12 @@
                         <outlet property="jamUsernameField" destination="FbE-g2-QH8" id="13d-oR-zCg"/>
                         <outlet property="jamboHeadWidthConstraint" destination="JFU-IY-A6Z" id="7VX-uH-oSk"/>
                         <outlet property="messageLabel" destination="XzI-wh-hFp" id="omO-RU-JsM"/>
-                        <segue destination="oQJ-lE-p5s" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aHp-XL-vOz"/>
+                        <segue destination="oQJ-lE-p5s" kind="presentation" identifier="ShowJam" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aHp-XL-vOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqW-Eq-sXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1504" y="334"/>
+            <point key="canvasLocation" x="-1589" y="204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ncP-jk-wg7">
