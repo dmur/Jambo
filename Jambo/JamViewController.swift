@@ -51,6 +51,7 @@ class JamViewController: UIViewController {
   func loadJam(jam: NSDictionary) {
     self.loadingSpinner.stopAnimating()
     self.navigationController?.setNavigationBarHidden(false, animated: true)
+    
     self.currentJamIsLabel.text = "\(self.username)'s current jam is:"
     self.loadJamBackground(jam)
     self.loadJamvatar(jam)
@@ -63,6 +64,24 @@ class JamViewController: UIViewController {
     let backgroundImage = UIImage(data: imageData!)
     self.jamBackgroundView.image = backgroundImage
     self.jamInfoBackgroundView.image = backgroundImage
+    
+    // Add parallax
+    let horizontalOffset = 0.025 * CGRectGetWidth(UIScreen.mainScreen().bounds)
+    let verticalOffset = 0.025 * CGRectGetHeight(UIScreen.mainScreen().bounds)
+    
+    let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
+    horizontalMotionEffect.minimumRelativeValue = -horizontalOffset
+    horizontalMotionEffect.maximumRelativeValue = horizontalOffset
+    let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+    verticalMotionEffect.minimumRelativeValue = -verticalOffset
+    verticalMotionEffect.maximumRelativeValue = verticalOffset
+    
+    let parallaxEffect = UIMotionEffectGroup()
+    parallaxEffect.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+    self.jamvatarBorderView.addMotionEffect(parallaxEffect)
+    self.currentJamIsLabel.addMotionEffect(parallaxEffect)
+    self.jamTitleLabel.addMotionEffect(parallaxEffect)
+    self.jamArtistLabel.addMotionEffect(parallaxEffect)
   }
   
   func loadJamvatar(jam: NSDictionary) {
