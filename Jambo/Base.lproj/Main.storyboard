@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oQJ-lE-p5s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J5a-0g-pSR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Jambo Sup View Controller-->
+        <scene sceneID="Rll-ll-I5V">
+            <objects>
+                <viewController id="J5a-0g-pSR" customClass="JamboSupViewController" customModule="Jambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DUu-N8-5vJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="4XU-D0-Z2T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ewZ-io-Uvt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JamboHead" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-hN-c1c">
+                                <rect key="frame" x="104" y="40" width="150" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m6D-hN-c1c" secondAttribute="height" multiplier="267:281" id="JMr-ps-SQz"/>
+                                    <constraint firstAttribute="width" constant="150" id="cbr-OC-qoT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey!  I'm Jambo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzI-wh-hFp">
+                                <rect key="frame" x="286" y="107" width="132" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="eiM-D1-jBt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbE-g2-QH8">
+                                <rect key="frame" x="16" y="229" width="568" height="74"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="54"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqE-uk-nme">
+                                <rect key="frame" x="234" y="306" width="132" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="(for This Is My Jam)">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FbE-g2-QH8" firstAttribute="leading" secondItem="ewZ-io-Uvt" secondAttribute="leading" constant="16" id="5VU-Le-uiL"/>
+                            <constraint firstAttribute="centerX" secondItem="m6D-hN-c1c" secondAttribute="centerX" multiplier="5/3" constant="1" id="Gc7-oF-aKU"/>
+                            <constraint firstItem="m6D-hN-c1c" firstAttribute="top" secondItem="DUu-N8-5vJ" secondAttribute="bottom" constant="20" id="I2b-q0-OIy"/>
+                            <constraint firstItem="XzI-wh-hFp" firstAttribute="leading" secondItem="m6D-hN-c1c" secondAttribute="trailing" constant="32" id="NeS-aK-u9D"/>
+                            <constraint firstAttribute="trailing" secondItem="FbE-g2-QH8" secondAttribute="trailing" constant="16" id="XIn-GA-KuM"/>
+                            <constraint firstAttribute="centerX" secondItem="FbE-g2-QH8" secondAttribute="centerX" id="cdV-4b-8Bq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XzI-wh-hFp" secondAttribute="trailing" constant="20" id="dIp-ka-jII"/>
+                            <constraint firstItem="FbE-g2-QH8" firstAttribute="top" secondItem="m6D-hN-c1c" secondAttribute="bottom" constant="31" id="fBb-aG-OeK"/>
+                            <constraint firstItem="gqE-uk-nme" firstAttribute="top" secondItem="FbE-g2-QH8" secondAttribute="bottom" constant="3" id="fI3-sY-FEx"/>
+                            <constraint firstAttribute="centerX" secondItem="gqE-uk-nme" secondAttribute="centerX" id="v2k-xD-tzo"/>
+                            <constraint firstItem="XzI-wh-hFp" firstAttribute="centerY" secondItem="m6D-hN-c1c" secondAttribute="centerY" id="vYs-VD-3VP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="oQJ-lE-p5s" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aHp-XL-vOz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqW-Eq-sXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1543" y="204"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ncP-jk-wg7">
             <objects>
@@ -90,12 +157,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ak-kK-zGX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ak-kK-zGX">
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-5G-Uvj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-5G-Uvj">
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -142,4 +209,7 @@
             <point key="canvasLocation" x="-96" y="204"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="JamboHead" width="267" height="281"/>
+    </resources>
 </document>
