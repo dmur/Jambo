@@ -34,9 +34,7 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
   func greetUser() {
     self.messageLabel.hidden = false
     
-    GCD.doAfter(1.5, {
-      self.promptForJamUsername()
-    });
+    GCD.doAfter(1.5, { self.promptForJamUsername() });
   }
   
   func promptForJamUsername() {

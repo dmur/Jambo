@@ -19,6 +19,7 @@ class JamViewController: UIViewController {
   @IBOutlet weak var jamTitleLabel: UILabel!
   @IBOutlet weak var jamArtistLabel: UILabel!
   @IBOutlet weak var currentJamIsLabel: UILabel!
+  @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
   
   var username: String = ""
   
@@ -26,34 +27,30 @@ class JamViewController: UIViewController {
     super.viewDidLoad()
     
     self.title = "\(self.username)'s jam"
-    self.currentJamIsLabel.text = "Loading \(self.username)'s jam..."
+    self.loadingSpinner.startAnimating()
 
     Alamofire.request(.GET, "http://api.thisismyjam.com/1/\(self.username).json", parameters: nil, encoding: .JSON).responseJSON {
       (_, _, profileData, _) in
-      let profile = profileData as NSDictionary?
+      self.loadingSpinner.stopAnimating()
       
-      if (profile == nil) { self.goBackToJambo(nil) }
-      else {
+      let profile = profileData as NSDictionary?
+      if (profile != nil) {
         let jam = profile!["jam"] as NSDictionary?
         let person = profile!["person"] as NSDictionary?
-        if (jam == nil) {
-          self.goBackToJambo(person != nil ? "No current jam for \(self.username)" : nil)
-        } else {
-          self.loadJam(jam!)
-        }
-      }
+        if (jam != nil) { self.loadJam(jam!) }
+        else { self.goBackToJambo(person != nil ? "No current jam for \(self.username)" : nil) }
+      } else { self.goBackToJambo(nil) }
     }
   }
   
   func goBackToJambo(message: String?) {
     self.currentJamIsLabel.text = message ?? "No profile found for \(self.username)"
-    
-    GCD.doAfter(1.5, {
-      self.performSegueWithIdentifier("ShowJambo", sender: nil)
-    })
+    GCD.doAfter(1.5, { self.performSegueWithIdentifier("ShowJambo", sender: nil) })
   }
   
   func loadJam(jam: NSDictionary) {
+    self.loadingSpinner.stopAnimating()
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
     self.currentJamIsLabel.text = "\(self.username)'s current jam is:"
     self.loadJamBackground(jam)
     self.loadJamvatar(jam)
