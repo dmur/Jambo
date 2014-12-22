@@ -34,7 +34,7 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
   func greetUser() {
     self.messageLabel.hidden = false
     
-    self.doAfter(1.5, {
+    GCD.doAfter(1.5, {
       self.promptForJamUsername()
     });
   }
@@ -67,15 +67,6 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
   
-  
-  func doAfter(seconds: Double, task: () -> Void) {
-    let delayTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW,
-    Int64(seconds * Double(NSEC_PER_SEC)))
-    dispatch_after(delayTime, dispatch_get_main_queue()) {
-      task()
-    }
-  }
-
     /*
     // MARK: - Navigation
 
