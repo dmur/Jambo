@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTw-2x-KjG" userLabel="JamboHeadContainer">
                                 <rect key="frame" x="124" y="20" width="150" height="158"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JamboHead" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-hN-c1c">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="JamboHead" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-hN-c1c">
                                         <constraints>
                                             <constraint firstAttribute="width" id="JFU-IY-A6Z"/>
                                             <constraint firstAttribute="width" secondItem="m6D-hN-c1c" secondAttribute="height" multiplier="75:79" id="sLz-JG-FfG"/>
@@ -36,12 +36,16 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="m6D-hN-c1c" secondAttribute="centerY" id="4QZ-62-Rh2"/>
                                     <constraint firstAttribute="centerX" secondItem="m6D-hN-c1c" secondAttribute="centerX" id="EMO-PR-KSi"/>
                                     <constraint firstAttribute="width" constant="150" id="P5V-i2-5Wm"/>
                                     <constraint firstAttribute="width" secondItem="uTw-2x-KjG" secondAttribute="height" multiplier="267:281" id="sda-8N-rqA"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mTd-9y-r4w" appends="YES" id="hQI-yc-7FJ"/>
+                                </connections>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey! I'm Jambo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzI-wh-hFp">
                                 <rect key="frame" x="305" y="87" width="127" height="24"/>
@@ -76,6 +80,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqW-Eq-sXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mTd-9y-r4w">
+                    <connections>
+                        <action selector="tapJambo:" destination="J5a-0g-pSR" id="NhZ-4a-Gbr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1589" y="204"/>
         </scene>

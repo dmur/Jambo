@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GCD: NSObject {
+class GCD {
   class func doAfter(seconds: Double, task: () -> Void) {
     let delayTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW,
       Int64(seconds * Double(NSEC_PER_SEC)))

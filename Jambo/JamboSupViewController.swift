@@ -14,21 +14,28 @@ class JamboSupViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var jamUsernameField: UITextField!
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.jamUsernameField.delegate = self
-    self.showJambo()
+    GCD.doAfter(1.0, {
+      self.showJambo({ (_) in self.greetUser() })
+    })
+    
   }
   
-  func showJambo() {
+  @IBAction func tapJambo(sender: AnyObject) {
+    self.showJambo({ (_) in nil })
+  }
+  
+  func showJambo(completion: (Bool) -> Void?) {
+    if (self.jamboHeadWidthConstraint.constant) != 20 {
+      self.jamboHeadWidthConstraint.constant = 20
+      self.view.setNeedsLayout()
+      self.view.layoutIfNeeded()
+    }
     self.jamboHeadWidthConstraint.constant = 150
     self.view.setNeedsLayout()
-    UIView.animateWithDuration(0.5, delay: 1.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseIn, animations: ({ () -> Void in
-      self.view.layoutIfNeeded()
-    }), completion: ({ (_) -> Void in
-      self.greetUser()
-    }))
+    UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.02, options: nil, animations: { self.view.layoutIfNeeded() }, completion: { (c) in completion(c); return })
   }
   
   func greetUser() {
